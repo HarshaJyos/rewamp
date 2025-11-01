@@ -1,9 +1,14 @@
 import { getIdToken } from "firebase/auth";
 import { auth } from "../config/firebase";
+import { Platform } from "react-native";
 
 class ApiService {
-  private base = "http://127.0.0.1:5001/syamapp-955e0/asia-south1";
-
+private get base() {
+  if (Platform.OS === 'android') {
+    return 'http://10.0.2.2:5001/syamapp-955e0/asia-south1';
+  }
+  return 'http://localhost:5001/syamapp-955e0/asia-south1';
+}
   private async headers() {
     const user = auth.currentUser;
     if (!user) throw new Error("Unauthenticated");
