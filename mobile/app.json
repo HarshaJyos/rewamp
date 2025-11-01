@@ -37,14 +37,6 @@
           "color": "#ffffff"
         }
       ],
-      [
-        "expo-font",
-        {
-          "fonts": [
-            "./node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"
-          ]
-        }
-      ],
       "expo-secure-store"
     ],
     "extra": {
