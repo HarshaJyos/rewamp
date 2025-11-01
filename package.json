@@ -1,0 +1,10 @@
+{
+  "name": "credit-card-app",
+  "private": true,
+  "workspaces": ["mobile", "functions"],
+  "scripts": {
+    "mobile": "cd mobile && expo start",
+    "functions": "cd functions && npm run serve",
+    "deploy": "firebase deploy --only functions"
+  }
+}
